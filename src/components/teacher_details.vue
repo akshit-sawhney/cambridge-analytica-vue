@@ -11,7 +11,11 @@
                         <h3>Sadness: {{data.sadness}}</h3>
 					</div>
 				</div>
-				<RadarChart :teachers='teachers'/>
+			</div>
+			<div class="row">
+				<div class="col-md-12"> 
+					<RadarChart :teachers='teachers'/>
+				</div>
 			</div>
 		</div>
 	</div>
