@@ -2,8 +2,9 @@
   <div class="home">
     <h1>{{title}}</h1>
     <div class="row">
-      <div class="col-md-4 col-lg4" v-for="(data,index) in teachers.data" :key="index">
-         <h3 @click="goTodetail(data.teacher_id)">{{data.name}}</h3>
+      <div class="col-md-4 col-lg4" v-for="(data,index) in teachers.data" :key="index" @click="goTodetail(data.teacher_id)">
+        <img :src="data.img_url"/>
+        <h3>{{data.name}}</h3>
       </div>
     </div>
   </div>
