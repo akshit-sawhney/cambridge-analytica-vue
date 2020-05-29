@@ -25,17 +25,26 @@ export default {
           datasets: [
             {
               label: "Teacher data",
-              backgroundColor: "rgba(179,181,198,0.2)",
-              borderColor: "rgba(179,181,198,1)",
-              pointBackgroundColor: "rgba(179,181,198,1)",
+              fill: true,
+              backgroundColor: "rgba(39, 128, 227, 0.1)",
+              borderColor: "rgba(39, 128, 227, 1)",
               pointBorderColor: "#fff",
-              pointHoverBackgroundColor: "#fff",
-              pointHoverBorderColor: "rgba(179,181,198,1)",
+              pointBackgroundColor: "rgba(39, 128, 227, 1)",
+              pointBorderColor: "#fff",
               data: [angerValue, joyValue, fearValue, sadnessValue]
             }
           ]
         },
-        { responsive: true, maintainAspectRatio: false }
+        { 
+          responsive: true,
+          maintainAspectRatio: true,
+          scale: {
+            ticks: {
+              beginAtZero: true,
+              stepSize: 1
+            }
+          }
+        }
       );
     }
   }
