@@ -4,18 +4,17 @@
 		
 		 <div class="contact">
 		 	<form>
+			 	<div class="form-group">
+      				<select class="form-control" v-model="teacher_id">
+        				<option disabled selected>Please select one</option>
+  						<option>Cristiano Ronaldo</option>
+  						<option>Lionel Messi</option>
+      				</select>
+    			</div>
 		 		<div class="form-group">
-		 			<div class="input-group-prepend">
-		 				<input v-model="teacher_id" type="text" class="form-control" name="">
-		 			</div>
-		 			<div class="input-group-prepend">
-		 			
-		 				<textarea v-model="message" class="form-control">
-		 					
-		 				</textarea>
-		 			</div>
-		 			<button class="btn btn-primary btn-block" @click="submitChatHandler()">Submit</button>
+		 			<textarea rows="3" v-model="message" class="form-control"></textarea>
 		 		</div>
+				<button class="btn btn-primary btn-block" @click="submitChatHandler()">Submit</button>
 		 	</form>
 		 </div>
 	</div>
