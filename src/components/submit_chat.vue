@@ -7,8 +7,8 @@
 			 	<div class="form-group">
       				<select class="form-control" v-model="teacher_id">
         				<option disabled selected>Please select one</option>
-  						<option>Cristiano Ronaldo</option>
-  						<option>Lionel Messi</option>
+  						<option value="1">Cristiano Ronaldo</option>
+  						<option value="2">Lionel Messi</option>
       				</select>
     			</div>
 		 		<div class="form-group">
@@ -33,7 +33,8 @@ import axios from 'axios';
 		methods: {
 			submitChatHandler() {
 				axios.post('http://localhost:1337/api/v1/tone_analyzer', {
-    				text: this.message
+    				text: this.message,
+					teacher_id: this.teacher_id
   				})
   				.then(function (response) {
     				console.log(response);
