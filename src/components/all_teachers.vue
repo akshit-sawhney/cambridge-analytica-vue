@@ -24,11 +24,11 @@ export default {
 			.get('http://localhost:1337/api/v1/tone_analyzer/get_all')
 			.then(response => (this.teachers = response.data))
 		},
-        methods:{
-            goTodetail(id) {
-                this.$router.push({name:'teacher_details',params:{Pid:id}})
-            }
-  }
+    methods:{
+        goTodetail(id) {
+          this.$router.push({name:'teacher_details',params:{Pid:id}})
+        }
+    }
 }
 </script>
 

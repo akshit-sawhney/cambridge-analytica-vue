@@ -10,25 +10,41 @@
 		 			</div>
 		 			<div class="input-group-prepend">
 		 			
-		 				<textarea class="form-control">
+		 				<textarea v-model="message" class="form-control">
 		 					
 		 				</textarea>
 		 			</div>
-		 			<button class="btn btn-primary btn-block">Submit</button>
+		 			<button class="btn btn-primary btn-block" @click="submitChatHandler()">Submit</button>
 		 		</div>
 		 	</form>
 		 </div>
 	</div>
 </template>
 <script>
+import axios from 'axios';
 	export default{
 		name:'blog',
 		data (){
 			return{
 				title:'Submit Chat for ',
-                teacher_id: null
+                teacher_id: null,
+				message: null
+			}
+		},
+		methods: {
+			submitChatHandler() {
+				axios.post('http://localhost:1337/api/v1/tone_analyzer', {
+    				text: this.message
+  				})
+  				.then(function (response) {
+    				console.log(response);
+  				})
+				.catch(err => {
+					console.log('fucked up', err);
+				})
 			}
 		}
+		
 	}
 </script>
 
