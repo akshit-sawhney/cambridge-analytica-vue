@@ -11,14 +11,19 @@
                         <h3>Sadness: {{data.sadness}}</h3>
 					</div>
 				</div>
+				<RadarChart :teachers='teachers'/>
 			</div>
 		</div>
 	</div>
 </template>
 <script>
 import axios from 'axios';
+import RadarChart from "./radar_chart";
 	export default{
 		name:'teacher_details',
+		components: {
+			RadarChart
+		},
 		data(){
 			return{
 				proId:this.$route.params.Pid,
