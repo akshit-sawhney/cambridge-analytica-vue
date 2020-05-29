@@ -27,7 +27,7 @@ export default {
 		},
     methods:{
         goTodetail(id) {
-          this.$router.push({name:'teacher_details',params:{Pid:id}})
+          this.$router.push({name:'teacher_details',params:{TeacherId:id}})
         }
     }
 }

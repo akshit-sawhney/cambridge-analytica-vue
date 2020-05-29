@@ -30,14 +30,14 @@ import RadarChart from "./radar_chart";
 		},
 		data(){
 			return{
-				proId:this.$route.params.Pid,
-				title:"teacher_details",
+				teacherId: this.$route.params.TeacherId,
+				title: "teacher_details",
 				teachers: []
 			}
 		},
         mounted () {
 			axios
-			.get('http://localhost:1337/api/v1/tone_analyzer/get?teacher_id=' + this.$route.params.Pid)
+			.get('http://localhost:1337/api/v1/tone_analyzer/get?teacher_id=' + this.$route.params.TeacherId)
 			.then(response => {
                 (this.teachers = response.data)
             })

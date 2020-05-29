@@ -24,7 +24,7 @@ export default new Router({
       component: submit_chat
     },
     {
-      path: '/teacher_details/:Pid',
+      path: '/teacher_details/:TeacherId',
       name: 'teacher_details',
       component: teacher_details
     }
